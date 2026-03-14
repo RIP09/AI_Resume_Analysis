@@ -1,4 +1,3 @@
----
 
 ```markdown
 # 🚀 SmartRes AI: Professional Resume Analyzer
