@@ -1,19 +1,18 @@
-SmartRes AI: Hackathon Edition 🚀
-🔗 [Live Demo Link] | 🎥 [Loom Video Link]
-Overview
-[cite_start]Built for the UnsaidTalks: Code the Future Hackathon, this tool uses LLMs to bridge the gap between students and recruiters[cite: 5, 22].
+# 🚀 SmartRes AI - Professional Resume Analyzer
 
-Key Features
-[cite_start]AI Scoring: Instant rating out of 10 based on recruiter logic[cite: 16].
-[cite_start]JD Alignment: Identifies missing keywords specifically for a target role[cite: 21].
-[cite_start]Summary Gen: Creates a high-impact 2-line summary[cite: 19].
-[cite_start]Actionable Tasks: Provides a roadmap to hit an 8/10 score[cite: 18].
-Tech Stack
-Language: Python
-[cite_start]AI: Google Gemini 1.5 Flash [cite: 20]
-Framework: Streamlit
-How to Run
-Clone the repo.
-Install requirements: pip install -r requirements.txt.
-Add your API Key to app.py.
-Run: streamlit run app.py.
+**SmartRes AI** is a high-performance career tool built for the **UnsaidTalks: Code the Future** hackathon. It leverages Google Gemini 1.5 Flash to provide deep, recruiter-level insights into how well a resume matches a Job Description.
+
+## 🌟 Key Features
+- **ATS-Style Scoring:** Instant rating out of 10 based on JD relevance.
+- **Strict 2-Line Summary:** High-impact professional summaries designed to pass human screening.
+- **Skill Gap Analysis:** Highlights specific missing keywords and technologies.
+- **Actionable Task:** Provides a single, high-priority task to improve the resume score to 8/10 or higher.
+- **Smart Model Fallback:** Built-in technical redundancy to ensure uptime.
+
+## 🛠️ Installation & Setup
+To run this project locally, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/RIP09/resumeanalyzer-ai.git](https://github.com/RIP09/resumeanalyzer-ai.git)
+   cd resumeanalyzer-ai
