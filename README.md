@@ -38,12 +38,14 @@ Make sure you have Python installed, then run:
 pip install streamlit google-generativeai PyPDF2 python-dotenv
 
 ```
-```
-# Step A: Ensure pip is up to date
+```# Step A: Ensure pip is up to date
 python -m pip install --upgrade pip
-
-# Step B: Install the necessary tools (Fixed command)
+```
+```# Step B: Install the necessary tools (Fixed command)
 python -m pip install streamlit google-generativeai PyPDF2 python-dotenv
+```
+```To update Libraries
+pip install -U google-genai
 ```
 ### 3. Configure API Credentials
 
