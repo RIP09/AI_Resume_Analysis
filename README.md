@@ -61,7 +61,7 @@ streamlit run app.py
 ```
 
 
-2. Open your browser to `http://localhost:8501`.
+2. Browser will open automatically `http://localhost:XXXX1`.
 3. Paste the **Job Description** in the text area.
 4. Upload your **Resume (PDF)**.
 5. Click **"Analyze Resume"** to receive AI-powered feedback.
