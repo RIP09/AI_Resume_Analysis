@@ -74,9 +74,6 @@ This project uses `.env` files to manage API keys. Ensure the `.env` file is inc
 **Developed for the UnsaidTalks Hackathon | March 2026**
 
 ```
-
----
-
 ```
 Developed by Deepanshu Murmu
 For Code the Future: AI Edition Hackathon
