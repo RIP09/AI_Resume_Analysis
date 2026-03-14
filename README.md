@@ -50,6 +50,7 @@ python -m pip install streamlit google-generativeai PyPDF2 python-dotenv
 Create a `.env` file in the root directory and add your Google API Key:
 
 env
+
 GOOGLE_API_KEY=your_api_key_here
 
 
