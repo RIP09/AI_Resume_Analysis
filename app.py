@@ -1,24 +1,25 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai  # NEW IMPORT
 import PyPDF2 as pdf
 import os
+from dotenv import load_dotenv
 
-# 1. SETUP - REPLACE THE KEY BELOW WITH YOUR ACTUAL API KEY
-# (Do this just for the demo to ensure it runs, then remove before final public share if desired)
-os.environ["GOOGLE_API_KEY"] = "YOUR_ACTUAL_GEMINI_API_KEY_HERE"
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+load_dotenv()
+api_key = os.getenv("GOOGLE_API_KEY")
+
+# Initialize the new Client
+client = genai.Client(api_key=api_key) 
 
 def get_gemini_response(resume_text, jd, prompt):
-    # This list covers the most common model names currently active
-    for model_name in ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro']:
-        try:
-            model = genai.GenerativeModel(model_name)
-            full_query = f"{prompt}\n\nResume:\n{resume_text}\n\nJD:\n{jd}"
-            response = model.generate_content(full_query)
-            return response.text
-        except Exception:
-            continue
-    return "AI Error: Please check API Key/Network."
+    # The new library makes it much simpler to call the model
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash", # Use the latest stable model
+            contents=f"{prompt}\n\nResume:\n{resume_text}\n\nJD:\n{jd}"
+        )
+        return response.text
+    except Exception as e:
+        return f"AI Error: {str(e)}"
 
 def input_pdf_text(uploaded_file):
     reader = pdf.PdfReader(uploaded_file)
